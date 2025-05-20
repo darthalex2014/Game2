@@ -12,6 +12,9 @@ ui_font = pygame.font.Font(None, 30) # For other UI elements like score and sele
 game_over_font = pygame.font.Font(None, 74)
 info_font = pygame.font.Font(None, 32)
 
+# Custom event for enemy spawning
+ENEMY_SPAWN_EVENT = pygame.USEREVENT + 1
+
 # Define Elements
 ELEMENTS = ["FIRE", "WATER", "AIR"]
 
@@ -202,9 +205,7 @@ def reset_game():
 # Initialize first game
 reset_game() # Call reset_game to initialize everything for the first playthrough
 
-# Custom event for enemy spawning
-ENEMY_SPAWN_EVENT = pygame.USEREVENT + 1
-# Timer is set in reset_game()
+# Timer for enemy spawning is set in reset_game()
 
 # Game loop
 running = True
